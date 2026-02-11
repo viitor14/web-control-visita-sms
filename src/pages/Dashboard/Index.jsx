@@ -36,7 +36,7 @@ import {
 } from './styled';
 
 import { MainDashboard } from '../../styles/GlobalStyles';
-
+const baseURL = import.meta.env.VITE_API_URL;
 const formatarVisita = (item) => {
   return {
     id: item.id,
@@ -171,7 +171,7 @@ export default function Dashboard() {
   }, [fetchData]);
 
   useEffect(() => {
-    const socket = socketio('http://192.168.60.181:3000');
+    const socket = socketio(baseURL);
     socket.on('nova_visita', (novaVisitaBruta) => {
       const novaVisitaFormatada = formatarVisita(novaVisitaBruta);
 

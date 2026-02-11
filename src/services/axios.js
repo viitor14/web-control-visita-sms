@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const baseURL = import.meta.env.VITE_API_URL;
 
 const axiosInstance = axios.create({
-  baseURL: 'http://192.168.60.181:3000'
+  baseURL: baseURL
 });
 
 axiosInstance.interceptors.response.use(
