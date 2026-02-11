@@ -48,7 +48,7 @@ const formatarPendentes = (item) => ({
     : '--:--',
   data_completa: item.data_entrada || item.created_at
 });
-
+const baseURL = import.meta.env.VITE_API_URL;
 export default function Visitas() {
   const token = useSelector((state) => state.auth.token);
   const user = useSelector((state) => state.auth.user);
@@ -179,7 +179,7 @@ export default function Visitas() {
   }, [loadVisitasPendentesHoje, limiteDinamico]);
 
   useEffect(() => {
-    const socket = socketio('http://192.168.60.181:3000');
+    const socket = socketio(baseURL);
 
     socket.on('nova_visita', (dadoBruto) => {
       const itemGeral = formatarGeral(dadoBruto);
