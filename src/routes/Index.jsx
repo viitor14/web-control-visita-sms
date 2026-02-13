@@ -6,7 +6,7 @@ import Login from '../pages/Login/Index';
 import Dashboard from '../pages/Dashboard/Index';
 import Visitas from '../pages/Visitas/Index';
 import Usuarios from '../pages/Usuarios/Index';
-import Page404 from '../pages/Page404';
+import Page404 from '../pages/Page404/Index';
 
 export default function Routes() {
   return (
