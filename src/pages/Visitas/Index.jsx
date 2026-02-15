@@ -48,7 +48,7 @@ const formatarPendentes = (item) => ({
     : '--:--',
   data_completa: item.data_entrada || item.created_at
 });
-const baseURL = import.meta.env.VITE_API_URL;
+const baseURL = import.meta.env.VITE_SOCKET_URL;
 export default function Visitas() {
   const token = useSelector((state) => state.auth.token);
   const user = useSelector((state) => state.auth.user);

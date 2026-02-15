@@ -36,7 +36,7 @@ import {
 } from './styled';
 
 import { MainDashboard } from '../../styles/GlobalStyles';
-const baseURL = import.meta.env.VITE_API_URL;
+const baseURL = import.meta.env.VITE_SOCKET_URL;
 const formatarVisita = (item) => {
   return {
     id: item.id,
